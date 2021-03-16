@@ -25,23 +25,23 @@
         </jdbcConnection>
 
         <!-- 如果同一工程中分多个模块，请手动修改包路径 -->
-        <javaModelGenerator targetPackage="com.mango.proposal.domain.model"
+        <javaModelGenerator targetPackage="com.mango.user.domain.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mapper.proposal" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapper.user" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.mango.proposal.dao"
+        <javaClientGenerator targetPackage="com.mango.user.dao"
                              targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
         <!-- 这里以 test 库的 t_proposal 表为示例 -->
-        <table schema="test" tableName="t_proposal"
+        <table schema="mango" tableName="mango_user"
                domainObjectName="Proposal" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">

@@ -23,8 +23,8 @@ public class ExampleServiceImpl {
     @Autowired
     private ExampleMapper exampleMapper;
 
-    @Autowired
-    private IdGenerationService idGenerationService;
+//    @Autowired
+//    private IdGenerationService idGenerationService;
 
     /**
      * 根据示例ID获取示例
@@ -54,7 +54,7 @@ public class ExampleServiceImpl {
      */
     public Long addExample(AddExampleParam addExampleParam) {
         Example example = new Example();
-        example.setId(idGenerationService.getPkId());
+//        example.setId(idGenerationService.getPkId());
         example.setExampleName(addExampleParam.getExampleName());
         return example.getId();
     }

@@ -9,10 +9,10 @@ import tk.mybatis.spring.annotation.MapperScan;
  * 启动类
  *
  */
-@SpringBootApplication(scanBasePackages = {"com.mango"})
-@MapperScan(basePackages = {"com.mango.*.dao"})
+@SpringBootApplication(scanBasePackages = {"com.mango.user"})
+@MapperScan(basePackages = {"com.mango.user.dao"})
 @EnableFeignClients(basePackages = {
-        "com.mango.*.*.service"
+        "com.mango.user.*.*.service"
 })
 public class MangoUserServiceApplication {
 

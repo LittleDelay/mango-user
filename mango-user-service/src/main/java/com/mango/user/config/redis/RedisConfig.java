@@ -16,8 +16,8 @@ import java.io.Serializable;
  * Redis配置类
  *
  */
-@Configuration
-@AutoConfigureAfter(RedisAutoConfiguration.class)
+//@Configuration
+//@AutoConfigureAfter(RedisAutoConfiguration.class)
 public class RedisConfig {
 
     /**
@@ -25,7 +25,7 @@ public class RedisConfig {
      *
      * @param redisConnectionFactory LettuceConnectionFactory实例，框架会自动注入
      * @return RedisTemplate 实例
-     */
+     *//*
     @Bean("redisTemplate")
     public RedisTemplate<String, Serializable> redisTemplate(LettuceConnectionFactory redisConnectionFactory) {
         // Key使用RedisSerializer序列化
@@ -43,6 +43,6 @@ public class RedisConfig {
         redisTemplate.setConnectionFactory(redisConnectionFactory);
 
         return redisTemplate;
-    }
+    }*/
 
 }

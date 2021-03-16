@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- 日志文件路径 -->
-    <property name="application.name" value="backend-service"/>
+    <property name="application.name" value="mango-service"/>
 
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
-    <include resource="com/mango/config/logging/console-appender.xml"/>
-    <include resource="com/mango/config/logging/file-appender.xml"/>
+    <include resource="com/mango/user/config/logging/console-appender.xml"/>
+    <include resource="com/mango/user/config/logging/file-appender.xml"/>
 
     <!-- 本地环境、开发环境、测试环境，多个使用逗号隔开 -->
     <springProfile name="dev,test">

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonParser.Feature;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.beans.factory.FactoryBean;
 
 import java.text.SimpleDateFormat;
@@ -13,15 +14,15 @@ import java.util.TimeZone;
  * Jackson ObjectMapper对象工厂，已初始化默认配置
  *
  */
-public class JacksonObjectMapperFactory implements FactoryBean<ObjectMapper> {
+public class JacksonObjectMapperFactory implements FactoryBean<XmlMapper> {
 
     private static final String DEFAULT_DATE_PATTERN = "yyyy-MM-dd HH:mm:ss";
 
     private String dateFormat = DEFAULT_DATE_PATTERN;
 
     @Override
-    public ObjectMapper getObject() {
-        ObjectMapper objectMapper = new ObjectMapper();
+    public XmlMapper getObject() {
+        XmlMapper objectMapper = new XmlMapper();
         // 设置可用单引号
         objectMapper.configure(Feature.ALLOW_SINGLE_QUOTES, true);
         // 设置字段可以不用双引号包括
