@@ -40,9 +40,9 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <!-- 这里以 test 库的 t_proposal 表为示例 -->
+        <!-- 这里以 test 库的 user 表为示例 -->
         <table schema="mango" tableName="mango_user"
-               domainObjectName="Proposal" enableCountByExample="false"
+               domainObjectName="User" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="false"/>
