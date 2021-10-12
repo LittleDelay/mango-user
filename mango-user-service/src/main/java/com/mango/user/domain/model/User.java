@@ -45,24 +45,10 @@ public class User implements Serializable {
     private Short sex;
 
     /**
-     * 删除状态【0已删除，1未删除】
-     * {@link com.mango.core.enums.DeleteStatusEnum}
-     */
-    @Column(name = "delete_status")
-    private Short deleteStatus;
-
-    /**
      * 手机号
      */
     @Column(name = "user_phone")
     private String userPhone;
-
-    /**
-     * 证件类型
-     * {@link com.mango.core.enums.IdTypeEnum}
-     */
-    @Column(name = "user_id_card_type")
-    private Short userIdCardType;
 
     /**
      * 用户等级
@@ -94,6 +80,13 @@ public class User implements Serializable {
     private String salt;
 
     /**
+     * 证件类型
+     * {@link com.mango.core.enums.IdTypeEnum}
+     */
+    @Column(name = "user_id_card_type")
+    private Short userIdCardType;
+
+    /**
      * 证件号
      */
     @Column(name = "user_id_card")
@@ -121,6 +114,13 @@ public class User implements Serializable {
      * 状态
      */
     private Short status;
+
+    /**
+     * 删除状态【0已删除，1未删除】
+     * {@link com.mango.core.enums.DeleteStatusEnum}
+     */
+    @Column(name = "delete_status")
+    private Short deleteStatus;
 
     /**
      * 创建时间
