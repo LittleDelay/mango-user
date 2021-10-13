@@ -9,21 +9,20 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
     <result column="sex" jdbcType="BIT" property="sex" />
-    <result column="delete_status" jdbcType="SMALLINT" property="deleteStatus" />
     <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
-    <result column="user_id_card_type" jdbcType="INTEGER" property="userIdCardType" />
-    <result column="user_level" jdbcType="SMALLINT" property="userLevel" />
-    <result column="user_type" jdbcType="INTEGER" property="userType" />
-    <result column="birthday" jdbcType="DATE" property="birthday" />
-    <result column="status" jdbcType="SMALLINT" property="status" />
+    <result column="user_level" jdbcType="TINYINT" property="userLevel" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="user_id_card_type" jdbcType="TINYINT" property="userIdCardType" />
+    <result column="user_id_card" jdbcType="VARCHAR" property="userIdCard" />
+    <result column="user_id_card_name" jdbcType="VARCHAR" property="userIdCardName" />
+    <result column="user_introduce" jdbcType="VARCHAR" property="userIntroduce" />
+    <result column="user_head_img" jdbcType="VARCHAR" property="userHeadImg" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="delete_status" jdbcType="BIT" property="deleteStatus" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-    <result column="user_email" jdbcType="VARBINARY" property="userEmail" />
-    <result column="user_pwd" jdbcType="VARBINARY" property="userPwd" />
-    <result column="salt" jdbcType="VARBINARY" property="salt" />
-    <result column="user_id_card" jdbcType="VARBINARY" property="userIdCard" />
-    <result column="user_id_card_name" jdbcType="VARBINARY" property="userIdCardName" />
-    <result column="user_introduce" jdbcType="VARBINARY" property="userIntroduce" />
-    <result column="user_head_img" jdbcType="VARBINARY" property="userHeadImg" />
   </resultMap>
 </mapper>
