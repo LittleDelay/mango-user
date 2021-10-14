@@ -3,7 +3,7 @@ package com.mango.api.service;
 import com.mango.api.common.constants.MangoConstants;
 import com.mango.api.common.feign.MangoFeignConfig;
 import com.mango.api.domain.UserRes;
-import com.mango.core.bean.response.ResponseKit;
+import com.mango.core.bean.response.ApiResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = MangoConstants.SERVICE_NAME, decode404 = true, configuration = MangoFeignConfig.class)
 public interface UserServiceApi {
 
-    String BASE_URL = "/api/mango/examples";
+    String BASE_URL = "/api/mango/user";
 
     /**
      * 查询示例
@@ -26,6 +26,6 @@ public interface UserServiceApi {
      * @param userId 用户ID
      * @return 用户信息
      */
-    @GetMapping(BASE_URL + "/{exampleId}")
-    ResponseKit<UserRes> getUserById(@PathVariable("userId") Long userId);
+    @GetMapping(BASE_URL + "/{userId}")
+    ApiResponse<UserRes> getUserById(@PathVariable("userId") Long userId);
 }

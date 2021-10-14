@@ -1,7 +1,7 @@
 package com.mango.user.service;
 
 import com.mango.api.domain.UserRes;
-import com.mango.core.bean.response.ResponseKit;
+import com.mango.core.bean.response.ApiResponse;
 
 /**
  * 用户service
@@ -12,5 +12,11 @@ import com.mango.core.bean.response.ResponseKit;
  */
 public interface UserService {
 
-    ResponseKit<UserRes> getUserById(Long id);
+    /**
+     * 根据ID查询用户信息
+     *
+     * @param userId 用户ID
+     * @return 用户信息
+     */
+    ApiResponse<UserRes> getUserById(Long userId);
 }

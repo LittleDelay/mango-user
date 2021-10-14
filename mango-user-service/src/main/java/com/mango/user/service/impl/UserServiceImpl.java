@@ -1,6 +1,7 @@
 package com.mango.user.service.impl;
 
 import com.mango.api.domain.UserRes;
+import com.mango.core.bean.response.ApiResponse;
 import com.mango.core.bean.response.ResponseKit;
 import com.mango.user.dao.UserMapper;
 import com.mango.user.domain.model.User;
@@ -22,9 +23,15 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+    /**
+     * 根据ID查询用户信息
+     *
+     * @param userId 用户ID
+     * @return 用户信息
+     */
     @Override
-    public ResponseKit<UserRes> getUserById(Long id) {
-        User user = userMapper.selectByPrimaryKey(id);
+    public ApiResponse<UserRes> getUserById(Long userId) {
+        User user = userMapper.selectByPrimaryKey(userId);
         UserRes userRes = new UserRes();
         BeanUtils.copyProperties(user, userRes);
         return ResponseKit.success(userRes);
